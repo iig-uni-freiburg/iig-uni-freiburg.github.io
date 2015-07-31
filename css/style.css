@@ -147,7 +147,7 @@ blockquote {
 }
 .banner-caption {
 	position: absolute;
-	top: 40%;
+	top: 25%;
 	width: 100%;
 	z-index: 2;
 }
