@@ -60,7 +60,7 @@ function showStats(htmlelementid) {
             var releaseAssets = item.assets;
             var hasAssets = releaseAssets.length != 0;
             var releaseAuthor = item.author;
-            var publishDate = item.published_at.split("T")[0];
+            var publishDate = new Date(item.published_at.split("T")[0]).toDateString().substring(4);
 	    var releaseDownloads = 0;
 
             if(hasAssets) {
