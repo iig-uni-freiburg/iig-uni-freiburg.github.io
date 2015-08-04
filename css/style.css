@@ -238,7 +238,8 @@ blockquote {
 	background: url("../images/bg-image-2.jpg") 50% 0px no-repeat;
 }
 .bg-image-2 {
-	background: url("../images/bg-image-2.jpg") no-repeat center bottom;
+	background: url("../images/bg-image-2.jpg") 50% 0px no-repeat fixed;
+	background-position: bottom center;
 }
 
 /* Misc
