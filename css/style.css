@@ -195,11 +195,6 @@ blockquote {
 .translucent-bg blockquote footer {
 	color: #cccccc;
 }
-.default-bg a,
-.translucent-bg a {
-	color: #ffffff;
-	text-decoration: underline;
-}
 .default-bg a:hover,
 .translucent-bg a:hover {
 	text-decoration: none;
