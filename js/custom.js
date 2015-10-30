@@ -57,11 +57,17 @@ function showStats(htmlelementid) {
         $.each(data, function(index, item) {
             var releaseTag = item.tag_name;
             var releaseURL = item.html_url;
+            var isPrerelease = item.prerelease;
             var releaseAssets = item.assets;
             var hasAssets = releaseAssets.length != 0;
             var releaseAuthor = item.author;
             var publishDate = new Date(item.published_at.split("T")[0]).toDateString().substring(4);
+            var prereleaseStr = "";
 	    var releaseDownloads = 0;
+
+            if(isPrerelease) {
+                prereleaseStr = " (pre-release)";
+            }
 
             if(hasAssets) {
                 $.each(releaseAssets, function(index, asset) {
@@ -74,7 +80,7 @@ function showStats(htmlelementid) {
 
             if(latest) {
 		// set latest stuff
-		latestStr = "Latest release: <a href=\"" + releaseURL + "\">" + releaseTag + "</a> &bull; " + releaseDownloads + " downloads since " + publishDate + " &bull; ";
+		latestStr = "Latest release: <a href=\"" + releaseURL + "\">" + releaseTag + "</a>" + prereleaseStr + " &bull; " + releaseDownloads + " downloads since " + publishDate + " &bull; ";
                 latest = false;
             }
         });
